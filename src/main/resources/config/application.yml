@@ -11,21 +11,16 @@ logging:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password: 
-    driverClassName: org.h2.Driver
-    schema: classpath:import.sql
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: true
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
+    password:
+    driverClassName: com.mysql.jdbc.Driver
+
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
     encoding: UTF-8
-    
+
 mybatis:
   type-aliases-package: com.github.narh.sample.mybatis.domain.model
   type-handlers-package: com.github.narh.sample.mybatis.domain.type
