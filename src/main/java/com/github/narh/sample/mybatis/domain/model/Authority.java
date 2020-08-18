@@ -26,7 +26,7 @@
 
 package com.github.narh.sample.mybatis.domain.model;
 
-import lombok.Data;
+//import lombok.Data;
 
 /**
  * 権限情報
@@ -34,11 +34,26 @@ import lombok.Data;
  * @author NARH https://github.com/NARH
  *
  */
-@Data
 public class Authority {
 
   /** ID*/
   private String username;
   /** 権限名*/
   private String authority;
+
+  public String getUsername() {
+	  return username;
+  }
+
+  public void setUsername(String username) {
+	  this.username = username;
+  }
+
+  public String getAuthority() {
+	  return authority;
+  }
+
+  public void setAuthority(String authority) {
+	  this.authority = authority;
+  }
 }

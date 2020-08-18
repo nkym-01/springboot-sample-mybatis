@@ -32,17 +32,49 @@ import java.util.List;
 
 import com.github.narh.sample.mybatis.domain.model.Weapon;
 
-import lombok.Data;
+// import lombok.Data;
 
 /**
  * @author NARH https://github.com/NARH
  *
  */
-@Data
+// @Data
 public class WeaponPage {
 
   private List<Weapon> weapons;
   private int recordSize = 0;
   private int currentPage = 1;
   private int fetchSize = 3;
+
+  public List<Weapon> getWeapons(){
+	  return weapons;
+  }
+
+  public void setWeapons(List<Weapon> weapons) {
+	  this.weapons = weapons;
+  }
+
+  public int getRecordSize() {
+	  return recordSize;
+  }
+
+  public void setRecordSize(int recordSize) {
+	  this.recordSize = recordSize;
+  }
+
+  public int getCurrentPage() {
+	  return currentPage;
+  }
+
+  public void setCurrentPage(int currentPage) {
+	  this.currentPage = currentPage;
+  }
+
+  public int getFetchSize() {
+	  return fetchSize;
+  }
+
+  public void setFetchSize(int fetchSize) {
+	  this.fetchSize = fetchSize;
+  }
 }

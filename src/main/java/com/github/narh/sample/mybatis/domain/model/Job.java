@@ -26,7 +26,7 @@
 
 package com.github.narh.sample.mybatis.domain.model;
 
-import lombok.Data;
+// import lombok.Data;
 
 /**
  * 職業情報
@@ -34,7 +34,7 @@ import lombok.Data;
  * @author NARH https://github.com/NARH
  *
  */
-@Data
+//@Data
 public class Job {
 
   /** 職業コード*/
@@ -43,4 +43,28 @@ public class Job {
   private String name;
   /** 呪い武器表示可否*/
   private boolean curse;
+
+  public String getCode() {
+	  return code;
+  }
+
+  public void setCode(String code) {
+	  this.code = code;
+  }
+
+  public String getName() {
+	  return name;
+  }
+
+  public void setName(String name) {
+	  this.name = name;
+  }
+
+  public boolean getCurse() {
+	  return curse;
+  }
+
+  public void setCurse(boolean curse) {
+	  this.curse = curse;
+  }
 }

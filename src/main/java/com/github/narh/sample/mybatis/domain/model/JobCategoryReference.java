@@ -28,17 +28,33 @@
 
 package com.github.narh.sample.mybatis.domain.model;
 
-import lombok.Data;
+//import lombok.Data;
 
 /**
  * 職業-武器カテゴリリファレンス情報
  * @author NARH https://github.com/NARH
  *
  */
-@Data
+//@Data
 public class JobCategoryReference {
   /** 職業情報*/
   private Job job;
   /** カテゴリ情報*/
   private Category category;
+
+  public Job getJob() {
+	  return job;
+  }
+
+  public void setJob() {
+	  this.job = job;
+  }
+
+  public Category getCategory() {
+	  return category;
+  }
+
+  public void setCategory(Category category) {
+	  this.category = category;
+  }
 }

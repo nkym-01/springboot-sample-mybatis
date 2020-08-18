@@ -31,7 +31,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 /**
  * コントローラークラス
@@ -39,7 +39,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author NARH https://github.com/NARH
  *
  */
-@Controller @Slf4j
+@Controller //@Slf4j
 public class WebController {
 
   /**
@@ -50,8 +50,6 @@ public class WebController {
    */
   @RequestMapping({"/WeaponList", "/"})
   public String WeaponList(@AuthenticationPrincipal AccountDetails accountDetails, Model model) {
-    if(log.isDebugEnabled()) log.debug(((AccountDetails) accountDetails).getUser().toString());
-
     // ログインユーザをモデルに設定する
     model.addAttribute("user", (((AccountDetails)accountDetails).getUser()));
     return "weapon_list";
@@ -65,7 +63,6 @@ public class WebController {
    */
   @RequestMapping("/WeaponDetail")
   public String weaponDetail(@AuthenticationPrincipal AccountDetails accountDetails) {
-    if(log.isDebugEnabled()) log.debug(((AccountDetails) accountDetails).getUser().toString());
 
     return "weapon_detail";
   }

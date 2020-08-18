@@ -29,9 +29,9 @@ package com.github.narh.sample.mybatis;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 /**
  * WebMvc 設定
@@ -39,17 +39,15 @@ import lombok.extern.slf4j.Slf4j;
  * @author NARH https://github.com/NARH
  *
  */
-@Configuration @Slf4j
-public class WebConfig extends WebMvcConfigurerAdapter {
+//@Slf4j
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
 
-  @Override
   public void addViewControllers(ViewControllerRegistry registry) {
     /* ログインページの登録*/
-    if(log.isDebugEnabled()) log.debug("login url registerd.");
     registry.addViewController("/Login").setViewName("login");
 
     /* ログアウトページの登録*/
-    if(log.isDebugEnabled()) log.debug("logout url registerd.");
     registry.addViewController("/Logout").setViewName("logout");
   }
 }
