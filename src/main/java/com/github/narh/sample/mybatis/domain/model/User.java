@@ -28,7 +28,7 @@ package com.github.narh.sample.mybatis.domain.model;
 
 import java.util.List;
 
-import lombok.Data;
+// import lombok.Data;
 
 /**
  * ログイン情報
@@ -36,7 +36,6 @@ import lombok.Data;
  * @author NARH https://github.com/NARH
  *
  */
-@Data
 public class User {
 
   /** ID*/
@@ -53,4 +52,60 @@ public class User {
   private boolean enabled;
   /** 権限情報*/
   private List<Authority> authorities;
+
+  public String getUsername() {
+	  return username;
+  }
+
+  public void setUsername(String username) {
+	  this.username = username;
+  }
+
+  public String getPassword() {
+	  return password;
+  }
+
+  public void setPassword(String password) {
+	  this.password = password;
+  }
+
+  public String getName() {
+	  return name;
+  }
+
+  public void setName(String name) {
+	  this.name = name;
+  }
+
+  public Job getJob() {
+	  return job;
+  }
+
+  public void setJob(Job job) {
+	  this.job = job;
+  }
+
+  public Integer getStrength() {
+	  return strength;
+  }
+
+  public void setStrength(Integer strength) {
+	  this.strength = strength;
+  }
+
+  public boolean getEnabled() {
+	  return enabled;
+  }
+
+  public void setEnabled() {
+	  this.enabled = enabled;
+  }
+
+  public List<Authority> getAuthorities(){
+	  return authorities;
+  }
+
+  public void setAuthorities(List<Authority> authorities) {
+	  this.authorities = authorities;
+  }
 }

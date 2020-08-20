@@ -28,14 +28,14 @@
 
 package com.github.narh.sample.mybatis.domain.model;
 
-import lombok.Data;
+//import lombok.Data;
 
 /**
  * 武器情報
  * @author NARH https://github.com/NARH
  *
  */
-@Data
+//@Data
 public class Weapon {
   /** 武器コード*/
   private String code;
@@ -47,4 +47,44 @@ public class Weapon {
   private Integer strength;
   /** 呪い可否*/
   private boolean curse;
+
+  public String getCode() {
+	  return code;
+  }
+
+  public void setCode(String code) {
+	  this.code = code;
+  }
+
+  public String getName() {
+	  return name;
+  }
+
+  public void setName(String name) {
+	  this.name = name;
+  }
+
+  public Category getCategory() {
+	  return category;
+  }
+
+  public void setCategory(Category category) {
+	  this.category = category;
+  }
+
+  public Integer getStrength() {
+	  return strength;
+  }
+
+  public void setStrength(Integer strength) {
+	  this.strength = strength;
+  }
+
+  public boolean getCurse() {
+	  return curse;
+  }
+
+  public void setCurse(boolean curse) {
+	  this.curse = curse;
+  }
 }

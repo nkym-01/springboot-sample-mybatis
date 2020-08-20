@@ -28,17 +28,33 @@
 
 package com.github.narh.sample.mybatis.domain.model;
 
-import lombok.Data;
+//import lombok.Data;
 
 /**
  * 武器カテゴリ情報
  * @author NARH https://github.com/NARH
  *
  */
-@Data
+//@Data
 public class Category {
   /** カテゴリコード*/
   private String code;
   /** カテゴリ名*/
   private String name;
+
+  public String getCode() {
+	  return code;
+  }
+
+  public void setCode(String code) {
+	  this.code = code;
+  }
+
+  public String getName() {
+	  return name;
+  }
+
+  public void setName(String name) {
+	  this.name = name;
+  }
 }

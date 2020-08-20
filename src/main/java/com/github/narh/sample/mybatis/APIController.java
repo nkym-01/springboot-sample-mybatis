@@ -39,7 +39,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.narh.sample.mybatis.domain.mapper.WeaponMapper;
 import com.github.narh.sample.mybatis.domain.model.Weapon;
 
-import lombok.extern.slf4j.Slf4j;
+// import lombok.extern.slf4j.Slf4j;
 
 /**
  * コントローラークラス
@@ -47,7 +47,7 @@ import lombok.extern.slf4j.Slf4j;
  * @author NARH https://github.com/NARH
  *
  */
-@Controller @Slf4j
+@Controller// @Slf4j
 public class APIController {
 
 
@@ -64,7 +64,6 @@ public class APIController {
   @RequestMapping("/WeaponList/page") @ResponseBody
   public WeaponPage WeaponList(@AuthenticationPrincipal AccountDetails accountDetails
       , @RequestParam int pageSize, @RequestParam int pageNumber) {
-    if(log.isDebugEnabled()) log.debug(((AccountDetails) accountDetails).getUser().toString());
     String jobCode = ((AccountDetails) accountDetails).getUser().getJob().getCode();
     WeaponPage page = new WeaponPage();
     try {
@@ -74,7 +73,7 @@ public class APIController {
       page.setWeapons(weapons);
     }
     catch(SQLException e) {
-      if(log.isErrorEnabled()) log.error(e.getMessage(),e);
+
     }
     return page;
   }

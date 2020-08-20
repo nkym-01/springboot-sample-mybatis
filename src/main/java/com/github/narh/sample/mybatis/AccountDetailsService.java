@@ -37,7 +37,7 @@ import org.springframework.stereotype.Service;
 import com.github.narh.sample.mybatis.domain.mapper.UserMapper;
 import com.github.narh.sample.mybatis.domain.model.User;
 
-import lombok.extern.slf4j.Slf4j;
+// import lombok.extern.slf4j.Slf4j;
 
 /**
  * MyBatis を使い認証を行うサービス
@@ -45,7 +45,8 @@ import lombok.extern.slf4j.Slf4j;
  * @author NARH https://github.com/NARH
  *
  */
-@Service @Slf4j
+@Service
+//@Slf4j
 public class AccountDetailsService implements UserDetailsService {
 
   /** ユーザ情報 Mapper*/
@@ -62,7 +63,6 @@ public class AccountDetailsService implements UserDetailsService {
     }
     /* SQL実行エラーの場合はアカウント無しとする */
     catch(SQLException e) {
-      if(log.isErrorEnabled()) log.error(e.getMessage(),e);
       throw new UsernameNotFoundException(e.getMessage(), e);
     }
   }
